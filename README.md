@@ -1,4 +1,4 @@
-# Lazy-RDP
+# Crazy-RDP
 
 1. The script automatically scans the address list, and then selecting the method and starting busting pair login / password.
 
@@ -20,7 +20,7 @@
 
 9. Setting
 
-        git clone https://github.com/getdrive/Lazy-RDP 
+        git clone https://github.com/mehranexpert/Crazy-RDP 
 
 8. Starting from the folder with the script through the terminal  
 
