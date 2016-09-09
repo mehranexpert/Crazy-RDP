@@ -1,29 +1,29 @@
-# Crazy-RDP
-Remote Desktop Bruteforce
+# Lazy-RDP
 
-The script automatically scans the address list, and then selecting the method and starting busting pair login / password.
+1. The script automatically scans the address list, and then selecting the method and starting busting pair login / password.
 
-The script is tuned for Kali linux 2.0 system.
+2. The script is tuned for Kali linux 2.0 system.
 
-To work correctly, the script requires the establishment; masscan, curl and hydra by van Hauser.
+3. To work correctly, the script requires the establishment; masscan, curl and hydra by van Hauser.
 
-The default path is registered in the script:
+4. The default path is registered in the script:
 
-a. /home/admin/opt/web/rdp_brute/open3389
+       a. /home/admin/opt/web/crazy_rdp/open3389
 
-b. /home/admin/opt/web/rdp_brute/users
+       b. /home/admin/opt/web/crazy_rdp/users
 
-c. /home/admin/opt/web/rdp_brute/dictionary/pass
+       c. /home/admin/opt/web/crazy_rdp/dictionary/pass
 
-So if you have any others, do in a word processor search and replace on your own.
+5. So if you have any others, do in a word processor search and replace on your own.
 
-The current version is 1.02. Added ability to select the method of sorting the pair login / password. Fixed a crash bug when selecting a script of some countries from the list. Fixed a bug with incorrect paths.
+6. The current version is 1.02. Added ability to select the method of sorting the pair login / password. Fixed a crash bug when selecting a script of some countries from the list. Fixed a bug with incorrect paths.
 
-Setting
+9. Setting
 
-'git clone https://github.com/getdrive/Lazy-RDP' 
-Starting from the folder with the script through the terminal
+        git clone https://github.com/getdrive/Lazy-RDP 
 
-a. chmod +x rdp_brute.sh
+8. Starting from the folder with the script through the terminal  
 
-b. ./rdp_brute.sh
+        a. chmod +x crazy_rdp.sh
+
+        b. ./crazy_rdp.sh
