@@ -27,3 +27,7 @@
         a. chmod +x crazy_rdp.sh
 
         b. ./crazy_rdp.sh
+        
+        
+        
+        *** Enjory ***
